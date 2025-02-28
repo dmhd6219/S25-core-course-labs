@@ -16,14 +16,14 @@ This is a simple python web application on FastAPI that shows current time in Mo
 
 2. Create virtual environment
 
-   * On Linux:
-   
+    * On Linux:
+
     ```bash
     python3 -m venv .venv
     source .venv/bin/activate
     ```
-   
-   * On Windows:
+
+    * On Windows:
    ```bash
    python -m venv .venv
    .venv\Scripts\Activate.ps1
@@ -31,13 +31,13 @@ This is a simple python web application on FastAPI that shows current time in Mo
 
 3. Install dependencies
 
-   * If you have [Poetry](https://python-poetry.org/docs/) installed:
+    * If you have [Poetry](https://python-poetry.org/docs/) installed:
 
     ```bash
     poetry install --no-root
     ```
 
-   * If you have **no** [Poetry](https://python-poetry.org/docs/) installed:
+    * If you have **no** [Poetry](https://python-poetry.org/docs/) installed:
 
     ```bash
     pip install -r dev-requirements.txt
@@ -78,11 +78,11 @@ fastapi dev main.py
    ```
 
 2. Run the application
-   
+
    ```bash
    docker run -d -p 8000:8000 dmhd6219/inno_devops_lab2_python_basic:latest
    ```
-   
+
 ## Running locally with Distroless Image Version
 
 ### Build it locally
@@ -104,7 +104,6 @@ fastapi dev main.py
    docker run -d -p 8000:8000 dmhd6219/inno_devops_lab2_python_basic:latest
    ```
 
-
 ### Pull from DockerHub
 
 1. Pull the image
@@ -117,9 +116,28 @@ fastapi dev main.py
    ```bash
    docker run -d -p 8000:8000 dmhd6219/inno_devops_lab2_python_bonus:latest
    ```
-   
+
 ## Unit Tests
+
+Unit tests are performed by `pytest` library.
+
+### Running locally
 
 ```bash
 pytest test.py
 ```
+
+### CI
+
+Runs on every push or PR into `app_python` folder.
+
+```yaml
+- name: Test with Pytest
+  run: pytest test.py
+```
+
+### Performed checks
+
+* Root endpoint availability
+* Static files availability
+* Templates are working

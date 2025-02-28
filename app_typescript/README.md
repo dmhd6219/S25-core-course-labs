@@ -100,6 +100,26 @@ npm run dev
 
 ## Unit Tests
 
+Unit tests are performed by `pytest` library.
+
+### Running locally
+
 ```bash
-pytest test.py
+npm run test
 ```
+
+### CI
+
+Runs on every push or PR into `app_typescript` folder.
+
+```yaml
+- name: Test with Vitest
+  run: npm run test
+```
+
+### Performed checks
+
+* Render Vite and React logos with correct links
+* Renders text content correctly
+* Render the time component correctly
+* Display the correct initial Moscow time
