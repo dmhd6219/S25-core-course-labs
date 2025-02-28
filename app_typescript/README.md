@@ -1,5 +1,7 @@
 # React Web Application
 
+![app_typescript workflow](https://github.com/dmhd6219/S25-core-course-labs/actions/workflows/app_typescript.yaml/badge.svg)
+
 ## Overview
 
 This is a simple typescript web application with Vite and React that shows current time in Moscow.

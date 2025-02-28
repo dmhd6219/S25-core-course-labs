@@ -1,5 +1,7 @@
 # Python Web Application
 
+![app_python workflow](https://github.com/dmhd6219/S25-core-course-labs/actions/workflows/app_python.yaml/badge.svg)
+
 ## Overview
 
 This is a simple python web application on FastAPI that shows current time in Moscow.
